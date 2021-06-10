@@ -1,0 +1,693 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+       url("../fonts/cuprum.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+       url("../fonts/cuprumbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+       url("../fonts/cuprumbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+       url("../fonts/cuprumitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --white-opacity-50: rgba(255, 255, 255, 0.5);
+  --white-opacity-30: rgba(255, 255, 255, 0.3);
+  --red: #ee3643;
+  --dark-red: #ca2c37;
+  --vinous: #ba2732;
+  --dark-blue: #293449;
+  --very-dark-blue: #161d29;
+  --navy-blue: #32425c;
+  --shady-blue: #212a3a;
+  --light-blue: #3bbce3;
+  --green: #63a63e;
+  --dull-green: #8ed78f;
+  --light-green: #5fbb2d;
+  --dark-green: #518534;
+  --yellow: #ffbf47;
+  --light-orange: #ffd180;
+  --light-orange-opacity: rgba(255,209,128, 0.5);
+  --purple: #dc91d8;
+  --gray: #a9a9a9;
+  --gray-opacity: rgba(169,169,169, 0.3);
+  --basic-light-gray: #c5c5c5;
+  --basic-light-gray-opacity: rgba(197,197,197, 0.3);
+  --light-gray: #e5e5e5;
+  --very-light-gray: #f9f5f0;
+  --bright-gray: #f1f1f1;
+  --grayish-blue: #f1f5f7;
+  --grayish-blue-opacity: rgba(241,245,247, 0.5);
+  --light-grayish-blue: #f3f7f9;
+}
+
+/* Global */
+
+.page {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pt Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Container */
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button */
+
+.button {
+  font-family: "Cuprum", "Arial", sans-serif;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.button:hover {
+  background-color: var(--dark-red);
+}
+
+.button:active {
+  background-color: var(--vinous);
+}
+
+/* Logo */
+
+.logo {
+  display: block;
+  background-color: var(--red);
+}
+
+.logo:active {
+  background-color: var(--vinous);
+}
+
+/* Header */
+
+.page-header {
+  font-family: "Cuprum", "Arial", sans-serif;
+  background-color: var(--grayish-blue);
+}
+
+.page-header__wrapper {
+  background-color: var(--dark-blue);
+}
+
+.page-header__search-button {
+  background-color: inherit;
+}
+
+.page-header__search {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: inherit;
+  color: var(--black);
+}
+
+.page-header__search::placeholder {
+  color: var(--white);
+}
+
+.page-header__search:focus {
+  background-color: var(--white);
+}
+
+.page-header__site-description {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: var(--red);
+}
+
+.page-header__phone a {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.page-header__address {
+  font-size: 14px;
+  color: var(--navy-blue);
+}
+
+.page-header__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-header__nav-item a {
+  display: block;
+  font-size: 18px;
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+.page-header__nav-item:hover a {
+  background-color: var(--dark-blue);
+}
+
+.page-header__nav-item:active a {
+  color: var(--white-opacity-50);
+}
+
+/* User-menu */
+
+.user-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-menu-item a {
+  display: block;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.user-menu-item:active a {
+  background-color: var(--very-dark-blue);
+  color: var(--white-opacity-50);
+}
+
+.user-menu-item--order a {
+  background-color: var(--green);
+}
+
+.user-menu-item--order:hover a {
+  background-color: var(--light-green);
+}
+
+.user-menu-item--order:active a {
+  background-color: var(--green);
+  color: var(--white-opacity-50);
+}
+
+.user-menu-item--added a {
+  background-color: var(--red);
+}
+
+.user-menu-item--added:active a {
+  background-color: var(--vinous);
+}
+
+/* User-account */
+
+.user-account__user {
+  background-color: var(--white);
+}
+
+.user-account__button {
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.user-account__button--login:hover,
+.user-account__button--registration:hover {
+  color: var(--red);
+}
+
+.user-account__button:active {
+  color: var(--basic-light-gray);
+}
+
+.user-account__nav a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--navy-blue);
+}
+
+.user-account__nav a:hover {
+  color: var(--red);
+}
+
+.user-account__nav a:active {
+  color: var(--basic-light-gray);
+}
+
+/* Main */
+
+.page-main {
+  background-color: var(--white);
+}
+
+/* Site-promo */
+
+.site-promo {
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+.site-promo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-promo__item--materials {
+  background-color: var(--yellow);
+}
+
+.site-promo__item--tool {
+  background-color: var(--light-blue);
+}
+
+.site-promo__item--machinery {
+  background-color: var(--purple);
+}
+
+.site-promo__item--slider {
+  background-color: var(--basic-light-gray);
+}
+
+.site-promo__item--discount {
+  background-color: var(--dull-green);
+}
+
+.site-promo__item--delivery {
+  background-color: var(--yellow);
+}
+
+.site-promo__item-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.site-promo__link {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--white-opacity-30);
+}
+
+.site-promo__link:hover {
+  background-color: var(--basic-light-gray-opacity);
+}
+
+.site-promo__link:active {
+  background-color: var(--gray-opacity);
+}
+
+.site-promo__slide-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.site-promo__slide-slogan {
+  font-size: 18px;
+  color: var(--white);
+}
+
+/* Wrapper-bar */
+
+.wrapper-bar {
+  background-color: var(--very-light-gray);
+}
+
+/* Popular-products */
+
+.popular-products__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--navy-blue);
+}
+
+/* Product-cards */
+
+.product-cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-cards__name {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.product-cards__old-price {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: line-through;
+  color: var(--gray);
+}
+
+.product-cards__button {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.product-cards__button--buy {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.product-cards__button--favorites {
+  color: var(--black);
+}
+
+.product-cards__button--buy:hover {
+  background-color: var(--light-green);
+}
+
+.product-cards__button--buy:active {
+  background-color: var(--dark-green);
+}
+
+/* Popular-manufacturers */
+
+.popular-manufacturers__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--navy-blue);
+}
+
+.popular-manufacturers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Services */
+
+.services {
+  background-color: var(--grayish-blue);
+}
+
+.services__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.services__slider-button {
+  display: block;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--navy-blue);
+  cursor: pointer;
+}
+
+.services__slider-button--active {
+  color: var(--navy-blue);
+  background-color: var(--white);
+}
+
+.services__slider-button:not(.services__slider-button--active):hover {
+  background-color: var(--dark-blue);
+}
+
+.services__slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services__slide-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--navy-blue);
+}
+
+/* About-us */
+
+.about-us__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/* Transport-companies */
+
+.transport-companies__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-companies__item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+/* Contacts */
+
+.contacts__title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+/* Footer */
+
+.page-footer {
+  font-family: "Cuprum", "Arial", sans-serif;
+  background-color: var(--navy-blue);
+}
+
+.page-footer__wrapper {
+  background-color: var(--dark-blue);
+}
+
+.page-footer__contacts {
+  font-size: 18px;
+  color: var(--light-grayish-blue);
+}
+
+.page-footer__site-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__site-nav-item a {
+  display: block;
+  font-size: 18px;
+  color: var(--grayish-blue);
+}
+
+.page-footer__site-nav-item:hover a {
+  text-decoration: underline;
+}
+
+.page-footer__site-nav-item:active a {
+  color: var(--grayish-blue-opacity);
+}
+
+.page-footer__product-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__product-nav-item a {
+  display: block;
+  font-size: 18px;
+  color: var(--light-orange);
+}
+
+.page-footer__product-nav-item:hover a {
+  text-decoration: underline;
+}
+
+.page-footer__product-nav-item:active a {
+  color: var(--light-orange-opacity);
+}
+
+.page-footer__copyright {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+/* Socials */
+
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__link {
+  display: block;
+  background-color: var(--shady-blue);
+}
+
+.socials__link:hover {
+  background-color: var(--red);
+}
+
+.page-footer__feedback p,
+.page-footer__development {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.page-footer__email,
+.page-footer__development-link {
+  color: var(--light-orange);
+}
+
+.page-footer__email:hover,
+.page-footer__development-link:hover {
+  text-decoration: underline;
+}
+
+.page-footer__email:active,
+.page-footer__development-link:active {
+  color: var(--red);
+}
+
+.page-footer__development {
+  margin: 0;
+}
+
+/* Feedback */
+
+.feedback {
+  background-color: var(--white);
+}
+
+.feedback__item label {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+.feedback__item input,
+.feedback__item textarea {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.feedback__item input::placeholder,
+.feedback__item textarea::placeholder {
+  color: var(--gray);
+}
+
+.feedback__background {
+  background-color: var(--bright-gray);
+}
+
+/* Success-popup */
+
+.success-popup__button--continue {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.success-popup__button--continue:hover {
+  color: var(--white);
+}
