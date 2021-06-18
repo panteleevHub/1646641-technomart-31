@@ -13,7 +13,7 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="container">
+        <div class="page-header__top container">
           <a class="page-header__logo logo" href="index.html" aria-label="Главная страница">
             <img src="img/logo-technomart-header.svg" width="108" height="18" alt="Логотип компании &laquo;Техномарт&raquo;">
           </a>
@@ -40,7 +40,7 @@
           </ul>
         </div>
       </div>
-      <div class="page-header__container container">
+      <div class="page-header__bottom container">
         <p class="page-header__site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <address class="page-header__contacts">
           <p class="page-header__phone">
@@ -334,13 +334,10 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="container">
-        <a class="page-footer__logo logo" href="index.html" aria-label="Главная страница">
+      <div class="page-footer__top container">
+        <a class="page-footer__logo logo" href="index.html">
           <img src="img/logo-technomart-footer.svg" width="138" height="23" alt="Логотип компании &laquo;Техномарт&raquo;">
         </a>
-        <address class="page-footer__contacts">
-          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П +7 800 555-86-28</p>
-        </address>
         <nav class="page-footer__nav">
           <ul class="page-footer__site-nav-list">
             <li class="page-footer__site-nav-item">
@@ -374,30 +371,37 @@
             </li>
           </ul>
         </nav>
-        <p class="page-footer__copyright">© 2010–2021 Компания «Техномарт» Все права защищены</p>
-        <ul class="socials">
-          <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#" target="_blank">
-              <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--facebook" href="#" target="_blank">
-              <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--instagram" href="#" target="_blank">
-              <img src="img/icon-instagram.svg" width="21" height="21" alt="Инстаграм">
-            </a>
-          </li>
-        </ul>
-        <address class="page-footer__feedback">
-          <p>Обратная связь:<br>
-            <a class="page-footer__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
+        <address class="page-footer__contacts">
+          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П +7 800 555-86-28</p>
         </address>
-        <p class="page-footer__development">Разработано — <a class="page-footer__development-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
+      </div>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__bottom container">
+          <p class="page-footer__copyright">© 2010–2021 Компания «Техномарт» Все права защищены</p>
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#" target="_blank">
+                <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook" href="#" target="_blank">
+                <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#" target="_blank">
+                <img src="img/icon-instagram.svg" width="21" height="21" alt="Инстаграм">
+              </a>
+            </li>
+          </ul>
+          <address class="page-footer__address">
+            <p class="page-footer__feedback">Обратная связь:<br>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="page-footer__development">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
+          </address>
+        </div>
       </div>
     </footer>
     <div class="success-popup">

@@ -217,6 +217,11 @@ img {
   background-color: var(--white);
 }
 
+.page-header__bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .page-header__site-description {
   font-size: 16px;
   line-height: 23px;
@@ -234,6 +239,10 @@ img {
 .page-header__address {
   font-size: 14px;
   color: var(--navy-blue);
+}
+
+.page-header__nav {
+  grid-column: 1 / -1;
 }
 
 .page-header__nav-list {
@@ -299,11 +308,16 @@ img {
 
 /* User-account */
 
+.user-account {
+
+}
+
 .user-account__user {
   background-color: var(--white);
 }
 
 .user-account__button {
+  display: block;
   font-size: 21px;
   line-height: 21px;
   background-color: var(--white);
@@ -343,9 +357,14 @@ img {
 
 .site-promo {
   font-family: "Cuprum", "Arial", sans-serif;
+  padding-top: 59px;
+  padding-bottom: 59px;
 }
 
 .site-promo__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -364,7 +383,13 @@ img {
 }
 
 .site-promo__item--slider {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
   background-color: var(--basic-light-gray);
+}
+
+.site-promo__slide--second {
+  display: none;
 }
 
 .site-promo__item--discount {
@@ -419,6 +444,10 @@ img {
 
 /* Popular-products */
 
+.popular-products {
+  margin-bottom: 70px;
+}
+
 .popular-products__title {
   color: var(--navy-blue);
 }
@@ -426,9 +455,17 @@ img {
 /* Product-cards */
 
 .product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px 20px;
   margin: 0;
   padding: 0;
   list-style: none;
+  outline: 1px solid black;
+}
+
+.product-cards__item {
+  outline: 1px solid red;
 }
 
 .product-cards__name {
@@ -472,11 +509,18 @@ img {
 
 /* Popular-manufacturers */
 
+.popular-manufacturers {
+  margin-bottom: 70px;
+}
+
 .popular-manufacturers__title {
   color: var(--navy-blue);
 }
 
 .popular-manufacturers__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -485,6 +529,7 @@ img {
 /* Services */
 
 .services {
+  padding-top: 64px;
   background-color: var(--grayish-blue);
 }
 
@@ -508,14 +553,30 @@ img {
   background-color: var(--dark-blue);
 }
 
-.services__slider {
+.services__slide-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.services__slide--second {
+  display: none;
+}
+
+.services__slide--third {
+  display: none;
+}
+
 .services__slide-title {
   color: var(--navy-blue);
+}
+
+/* Sections-wrapper */
+
+.sections-wrapper {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 /* About-us */
@@ -701,16 +762,18 @@ img {
   background-color: var(--navy-blue);
 }
 
-.page-footer__wrapper {
-  background-color: var(--dark-blue);
+.page-footer__top {
+  display: grid;
+  grid-template-columns: 333px 1fr;
 }
 
-.page-footer__contacts {
-  font-size: 18px;
-  color: var(--light-grayish-blue);
+.page-footer__nav {
+  grid-column: 2 / -1;
+  grid-row: 1 / 3;
 }
 
 .page-footer__site-nav-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -731,6 +794,7 @@ img {
 }
 
 .page-footer__product-nav-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -750,10 +814,39 @@ img {
   color: var(--light-orange-opacity);
 }
 
+.page-footer__contacts {
+  font-size: 18px;
+  color: var(--light-grayish-blue);
+}
+
+.page-footer__wrapper {
+  background-color: var(--dark-blue);
+}
+
 .page-footer__copyright {
   font-size: 16px;
   line-height: 18px;
   color: var(--white);
+}
+
+.page-footer__address p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+  margin: 0;
+}
+
+.page-footer__address a {
+  color: var(--light-orange);
+}
+
+.page-footer__address a:hover {
+  text-decoration: underline;
+}
+
+.page-footer__address a:active {
+  color: var(--red);
 }
 
 /* Socials */
@@ -771,32 +864,6 @@ img {
 
 .socials__link:hover {
   background-color: var(--red);
-}
-
-.page-footer__feedback p,
-.page-footer__development {
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--white);
-}
-
-.page-footer__email,
-.page-footer__development-link {
-  color: var(--light-orange);
-}
-
-.page-footer__email:hover,
-.page-footer__development-link:hover {
-  text-decoration: underline;
-}
-
-.page-footer__email:active,
-.page-footer__development-link:active {
-  color: var(--red);
-}
-
-.page-footer__development {
-  margin: 0;
 }
 
 /* Feedback */
