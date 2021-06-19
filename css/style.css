@@ -611,11 +611,16 @@ img {
   background-color: var(--grayish-blue);
 }
 
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 20px;
+  padding-bottom: 59px;
+}
+
 /* Breadcrumbs */
 
 .breadcrumbs {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
