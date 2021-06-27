@@ -18,13 +18,6 @@
             <img src="img/logo-technomart-header.svg" width="108" height="18" alt="Логотип компании &laquo;Техномарт&raquo;">
           </a>
           <form class="page-header__form" method="get" action="https://echo.htmlacademy.ru/" target="_blank">
-            <button class="page-header__search-button" type="submit" aria-label="Поиск">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
-                </g>
-              </svg>
-            </button>
             <input class="page-header__search" type="search" name="site-search" placeholder="Поиск:">
           </form>
           <ul class="user-menu">
@@ -56,7 +49,7 @@
               </svg>
               <span>Равшан Джамшутович</span>
             </a>
-            <a class="user-account__deauthorize-button" href="#">
+            <a class="user-account__button user-account__deauthorize-button" href="#">
               <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z" fill="#C5C5C5"/>
@@ -68,32 +61,32 @@
             <a class="user-account__personal-account" href="#">Личный кабинет</a>
           </div>
         </div>
-        <nav class="page-header__nav">
-          <ul class="page-header__nav-list">
-            <li class="page-header__nav-item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Компания</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Каталог</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Новости</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Спецпредложения</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
       </div>
+      <nav class="page-header__nav container">
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item page-header__nav-item--main">
+            <a>Главная</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--company">
+            <a href="#">Компания</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--catalog">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--news">
+            <a href="#">Новости</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--offers">
+            <a href="#">Спецпредложения</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--delivery">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="page-header__nav-item page-header__nav-item--contacts">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="page-main catalog">
       <ul class="breadcrumbs container">
@@ -199,10 +192,12 @@
               </a>
             </div>
           </div>
-          <ul class="product-cards">
+          <ul class="product-cards product-cards--catalog">
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 6000</h3>
-              <img class="product-cards__image" src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -214,10 +209,12 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 6000</h3>
-              <img class="product-cards__image" src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
-                <a class="product-cards__button" href="#">В закладки</a>
+                <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
               </div>
               <p class="product-cards__old-price">30500 Р.</p>
               <p class="product-cards__new-price">
@@ -226,7 +223,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 6000</h3>
-              <img class="product-cards__image" src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -238,7 +237,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 3000</h3>
-              <img class="product-cards__image" src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -250,7 +251,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 6000</h3>
-              <img class="product-cards__image" src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -262,7 +265,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 2000</h3>
-              <img class="product-cards__image" src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -274,7 +279,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 3000</h3>
-              <img class="product-cards__image" src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -286,7 +293,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 6000</h3>
-              <img class="product-cards__image" src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -298,7 +307,9 @@
             </li>
             <li class="product-cards__item">
               <h3 class="product-cards__name">Перфоратор BOSCH BFG 2000</h3>
-              <img class="product-cards__image" src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              <p class="product-cards__image">
+                <img src="img/perforator-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH">
+              </p>
               <div class="product-cards__buttons">
                 <a class="product-cards__button product-cards__button--buy" href="#">Купить</a>
                 <a class="product-cards__button product-cards__button--favorites" href="#">В закладки</a>
@@ -360,7 +371,7 @@
             <li class="page-footer__product-nav-item">
               <a href="#">Материалы</a>
             </li>
-            <li class="page-footer__product-nav-item">
+            <li class="page-footer__product-nav-item page-footer__product-nav-item--machinery">
               <a href="#">Техника</a>
             </li>
             <li class="page-footer__product-nav-item">
@@ -380,19 +391,13 @@
           <p class="page-footer__copyright">© 2010–2021 Компания «Техномарт» Все права защищены</p>
           <ul class="socials">
             <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#" target="_blank">
-                <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
-              </a>
+              <a class="socials__link socials__link--vk" href="#" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="#" target="_blank">
-                <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
-              </a>
+              <a class="socials__link socials__link--facebook" href="#" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="#" target="_blank">
-                <img src="img/icon-instagram.svg" width="21" height="21" alt="Инстаграм">
-              </a>
+              <a class="socials__link socials__link--instagram" href="#" target="_blank"></a>
             </li>
           </ul>
           <address class="page-footer__address">
