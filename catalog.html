@@ -34,8 +34,8 @@
         </div>
       </div>
       <div class="page-header__bottom container">
-        <p class="page-header__site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <address class="page-header__contacts">
+        <p class="page-header__site-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
+        <address class="page-header__contacts page-header__contacts--catalog">
           <p class="page-header__phone">
             <a href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
@@ -49,7 +49,7 @@
               </svg>
               <span>Равшан Джамшутович</span>
             </a>
-            <a class="user-account__button user-account__deauthorize-button" href="#">
+            <a class="user-account__button user-account__button--deauthorize" href="#">
               <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z" fill="#C5C5C5"/>
@@ -57,15 +57,15 @@
             </a>
           </div>
           <div class="user-account__nav">
-            <a class="user-account__orders" href="#">Мои заказы</a>
-            <a class="user-account__personal-account" href="#">Личный кабинет</a>
+            <a class="user-account__nav-item user-account__orders" href="#">Мои заказы</a>
+            <a class="user-account__nav-item user-account__personal-account" href="#">Личный кабинет</a>
           </div>
         </div>
       </div>
       <nav class="page-header__nav container">
         <ul class="page-header__nav-list">
           <li class="page-header__nav-item page-header__nav-item--main">
-            <a>Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="page-header__nav-item page-header__nav-item--company">
             <a href="#">Компания</a>
@@ -89,27 +89,29 @@
       </nav>
     </header>
     <main class="page-main catalog">
-      <ul class="breadcrumbs container">
-        <li class="breadcrumbs__item">
-          <a href="#" aria-label="Главная страница"></a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Каталог</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Инструмент</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Перфораторы</a>
-        </li>
-      </ul>
-      <h1 class="catalog__title title container">Перфораторы</h1>
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item breadcrumbs__item--home">
+            <a href="#" aria-label="Главная страница"></a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Инструмент</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Перфораторы</a>
+          </li>
+        </ul>
+        <h1 class="catalog__title title">Перфораторы</h1>
+      </div>
       <div class="catalog__wrapper container">
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru/" target="_blank">
             <p class="filter__caption">Фильтр:</p>
-            <fieldset class="filter__price">
+            <fieldset class="filter__fieldset filter__price">
               <legend>Цена:</legend>
               <div class="range-controls">
                 <div class="range-controls__scale">
@@ -120,10 +122,11 @@
               </div>
               <div class="price-controls">
                 <input class="price-controls__input" type="text" name="min-price" maxlength="5" value="0">
+                <span class="price-controls__span">&ndash;</span>
                 <input class="price-controls__input" type="text" name="max-price" maxlength="7" value="30000">
               </div>
             </fieldset>
-            <fieldset class="filter__manufacturers">
+            <fieldset class="filter__fieldset filter__manufacturers">
               <legend>Производители:</legend>
               <ul class="filter__manufacturers-list">
                 <li class="filter__manufacturers-item">
@@ -148,7 +151,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__power">
+            <fieldset class="filter__fieldset filter__power">
               <legend>Питание:</legend>
               <ul class="filter__power-list">
                 <li class="filter__power-item">
@@ -180,12 +183,12 @@
               </li>
             </ul>
             <div class="sort__buttons">
-              <a class="sort__button sort__button--up sort__button--current" aria-label="Вверх">
+              <a class="sort__button sort__button--up sort__button--current" href="#" aria-label="Вверх">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
                 </svg>
               </a>
-              <a class="sort__button sort__button--down" aria-label="Вниз">
+              <a class="sort__button sort__button--down" href="#" aria-label="Вниз">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
                 </svg>
@@ -330,7 +333,7 @@
             <li class="pagination__item">
               <a href="#">3</a>
             </li>
-            <li class="pagination__item">
+            <li class="pagination__item pagination__item--next">
               <a href="#">Следующая</a>
             </li>
           </ul>
@@ -340,7 +343,7 @@
         <h2 class="visually-hidden">Информация о продукте</h2>
         <div class="container">
           <p class="product-info__caption title">Пара слов о перфораторах</p>
-          <p class="product-info__description">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+          <p class="product-info__description">Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>
     </main>
@@ -404,7 +407,7 @@
             <p class="page-footer__feedback">Обратная связь:<br>
               <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
-            <p class="page-footer__development">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
+            <p class="page-footer__development">Разработано &ndash; <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
           </address>
         </div>
       </div>
