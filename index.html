@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
@@ -54,14 +54,14 @@
       </div>
       <nav class="page-header__nav container">
         <ul class="page-header__nav-list">
-          <li class="page-header__nav-item page-header__nav-item--main">
+          <li class="page-header__nav-item page-header__nav-item--main page-header__nav-item--active">
             <a>Главная</a>
           </li>
           <li class="page-header__nav-item page-header__nav-item--company">
             <a href="#">Компания</a>
           </li>
           <li class="page-header__nav-item page-header__nav-item--catalog">
-            <a href="#">Каталог</a>
+            <a href="catalog.html">Каталог</a>
           </li>
           <li class="page-header__nav-item page-header__nav-item--news">
             <a href="#">Новости</a>
@@ -97,7 +97,7 @@
           </li>
           <li class="site-promo__item site-promo__item--slider">
             <div class="site-promo__slider">
-              <div class="site-promo__slide site-promo__slide--first">
+              <div class="site-promo__slide site-promo__slide--first site-promo__slide--active">
                 <div class="site-promo__slide-text">
                   <h3 class="site-promo__slide-title">Перфораторы</h3>
                   <p class="site-promo__slide-slogan">
@@ -255,7 +255,7 @@
               <button class="services__slider-button" type="button">Кредит</button>
             </div>
             <ul class="services__slide-list">
-              <li class="services__slide services__slide--first">
+              <li class="services__slide services__slide--first services__slide--active">
                 <h3 class="services__slide-title title">Доставка</h3>
                 <p class="services__slide-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
               </li>
@@ -295,7 +295,7 @@
         <section class="contacts">
           <h2 class="contacts__title title">Контакты</h2>
           <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="contacts__map" href="#">
+          <a class="contacts__map" href="#" aria-label="Открыть карту">
             <img class="contacts__map-image" src="img/small-map.png" width="300" height="158" alt="Маленькая карта">
           </a>
           <a class="contacts__button button" href="#">Заблудились? Напишите нам!</a>
@@ -341,7 +341,7 @@
           </ul>
         </nav>
         <address class="page-footer__contacts">
-          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П +7 800 555-86-28</p>
+          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П <a href="tel:+78005558628">+7 800 555-86-28</a></p>
         </address>
       </div>
       <div class="page-footer__wrapper">
@@ -349,13 +349,13 @@
           <p class="page-footer__copyright">© 2010–2021 Компания «Техномарт» Все права защищены</p>
           <ul class="socials">
             <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--facebook" href="#" aria-label="Фэйсбук" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--instagram" href="#"  aria-label="Инстаграм" target="_blank"></a>
             </li>
           </ul>
           <address class="page-footer__address">
@@ -396,5 +396,15 @@
       <img src="img/large-map.png" width="943" height="449" alt="Большая карта">
       <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15974.01048503577!2d30.29024137687361!3d59.96944861840394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LMuINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQvdCw0LEuINCg0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUg0LvQuNGCINCf!5e0!3m2!1sru!2sby!4v1624786940315!5m2!1sru!2sby" width="943" height="449" allowfullscreen=""></iframe>
     </section>
+    <div class="cart-popup">
+      <button class="cart-popup__close" type="button" aria-label="Закрыть"></button>
+      <p class="cart-popup__text">Товар добавлен в корзину!</p>
+      <p class="cart-popup__buttons">
+        <a class="cart-popup__button button" href="#">Оформить заказ</a>
+        <a class="cart-popup__button cart-popup__button--continue button" href="#">Продолжить покупки</a>
+      </p>
+    </div>
+    <script src="js/script.min.js"></script>
+    <script src="js/cart-popup.min.js"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
@@ -49,7 +49,7 @@
               </svg>
               <span>Равшан Джамшутович</span>
             </a>
-            <a class="user-account__button user-account__button--deauthorize" href="#">
+            <a class="user-account__button user-account__button--deauthorize" href="#" aria-label="Выйти из учетной записи">
               <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z" fill="#C5C5C5"/>
@@ -70,8 +70,8 @@
           <li class="page-header__nav-item page-header__nav-item--company">
             <a href="#">Компания</a>
           </li>
-          <li class="page-header__nav-item page-header__nav-item--catalog">
-            <a href="#">Каталог</a>
+          <li class="page-header__nav-item page-header__nav-item--catalog page-header__nav-item--active">
+            <a>Каталог</a>
           </li>
           <li class="page-header__nav-item page-header__nav-item--news">
             <a href="#">Новости</a>
@@ -349,7 +349,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__top container">
-        <a class="page-footer__logo logo" href="index.html">
+        <a class="page-footer__logo logo" href="index.html" aria-label="Главная страница">
           <img src="img/logo-technomart-footer.svg" width="138" height="23" alt="Логотип компании &laquo;Техномарт&raquo;">
         </a>
         <nav class="page-footer__nav">
@@ -386,7 +386,7 @@
           </ul>
         </nav>
         <address class="page-footer__contacts">
-          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П +7 800 555-86-28</p>
+          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П <a href="tel:+78005558628">+7 800 555-86-28</a></p>
         </address>
       </div>
       <div class="page-footer__wrapper">
@@ -394,13 +394,13 @@
           <p class="page-footer__copyright">© 2010–2021 Компания «Техномарт» Все права защищены</p>
           <ul class="socials">
             <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--facebook" href="#" aria-label="Фэйсбук" target="_blank"></a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="#" target="_blank"></a>
+              <a class="socials__link socials__link--instagram" href="#"  aria-label="Инстаграм" target="_blank"></a>
             </li>
           </ul>
           <address class="page-footer__address">
@@ -412,13 +412,14 @@
         </div>
       </div>
     </footer>
-    <div class="success-popup">
-      <button class="success-popup__close" type="button" aria-label="Закрыть"></button>
-      <p class="success-popup__text">Товар добавлен в корзину!</p>
-      <p class="success-popup__buttons">
-        <a class="success-popup__button button" href="#">Оформить заказ</a>
-        <a class="success-popup__button success-popup__button--continue button" href="#">Продолжить покупки</a>
+    <div class="cart-popup">
+      <button class="cart-popup__close" type="button" aria-label="Закрыть"></button>
+      <p class="cart-popup__text">Товар добавлен в корзину!</p>
+      <p class="cart-popup__buttons">
+        <a class="cart-popup__button button" href="#">Оформить заказ</a>
+        <a class="cart-popup__button cart-popup__button--continue button" href="#">Продолжить покупки</a>
       </p>
     </div>
+    <script src="js/cart-popup.min.js"></script>
   </body>
 </html>
