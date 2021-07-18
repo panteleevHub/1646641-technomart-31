@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Виктор Пантелеев](https://up.htmlacademy.ru/htmlcss/31/user/1646641).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
 
 ---
 
