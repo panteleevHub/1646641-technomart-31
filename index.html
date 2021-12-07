@@ -96,30 +96,30 @@
             <a class="site-promo__link" href="#">Для стройки</a>
           </li>
           <li class="site-promo__item site-promo__item--slider">
-            <div class="site-promo__slider">
-              <div class="site-promo__slide site-promo__slide--first site-promo__slide--active">
+            <ul class="site-promo__slides">
+              <li class="site-promo__slide site-promo__slide--first site-promo__slide--active">
                 <div class="site-promo__slide-text">
                   <h3 class="site-promo__slide-title">Перфораторы</h3>
                   <p class="site-promo__slide-slogan">
                   Настоящие мужские игрушки</p>
                 </div>
                 <a class="site-promo__slide-button button" href="catalog.html">Открыть каталог</a>
-              </div>
-              <div class="site-promo__slide site-promo__slide--second">
+              </li>
+              <li class="site-promo__slide site-promo__slide--second">
                 <div class="site-promo__slide-text">
                   <h3 class="site-promo__slide-title">Дрели</h3>
                   <p class="site-promo__slide-slogan">Соседям на радость!</p>
                 </div>
                 <a class="site-promo__slide-button button" href="catalog.html">Открыть каталог</a>
-              </div>
-            </div>
+              </li>
+            </ul>
             <div class="site-promo__arrow-buttons">
               <button class="site-promo__arrow-button site-promo__arrow-button--left" type="button" aria-label="Предыдущий слайд"></button>
               <button class="site-promo__arrow-button site-promo__arrow-button--right" type="button" aria-label="Следующий слайд"></button>
             </div>
             <div class="site-promo__slider-buttons">
-              <button class="site-promo__slider-button site-promo__slider-button--active" type="button" aria-label="Первый слайд"></button>
-              <button class="site-promo__slider-button" type="button" aria-label="Второй слайд"></button>
+              <button class="site-promo__slider-button site-promo__slider-button--active" type="button" aria-label="Первый слайд" id="site-promo__slide--first"></button>
+              <button class="site-promo__slider-button" type="button" id="site-promo__slide--second" aria-label="Второй слайд"></button>
             </div>
           </li>
           <li class="site-promo__item site-promo__item--discount">
@@ -250,9 +250,9 @@
           <p class="services__description">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="services__slider">
             <div class="services__slider-buttons">
-              <button class="services__slider-button services__slider-button--active" type="button">Доставка</button>
-              <button class="services__slider-button" type="button">Гарантия</button>
-              <button class="services__slider-button" type="button">Кредит</button>
+              <button class="services__slider-button services__slider-button--active" type="button" id="services__slide--first">Доставка</button>
+              <button class="services__slider-button" type="button" id="services__slide--second">Гарантия</button>
+              <button class="services__slider-button" type="button" id="services__slide--third">Кредит</button>
             </div>
             <ul class="services__slide-list">
               <li class="services__slide services__slide--first services__slide--active">
@@ -404,7 +404,8 @@
         <a class="cart-popup__button cart-popup__button--continue button" href="#">Продолжить покупки</a>
       </p>
     </div>
-    <script src="js/script.min.js"></script>
+    <script src="js/slider.min.js"></script>
+    <script src="js/modal.min.js"></script>
     <script src="js/cart-popup.min.js"></script>
   </body>
 </html>

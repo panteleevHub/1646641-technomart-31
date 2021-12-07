@@ -702,14 +702,19 @@ img {
   padding: 0;
 }
 
-.site-promo__slider {
+.site-promo__slides {
+  display: flex;
   height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .site-promo__slide {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   min-height: 100%;
   background-color: var(--basic-light-gray);
   background-repeat: no-repeat;
@@ -815,15 +820,14 @@ img {
 
 .site-promo__slider-buttons {
   position: absolute;
-  left: 50%;
+  left: 295px;
   bottom: 36px;
-  transform: translateX(-50%);
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 10px;
+  gap: 10px;
   min-width: 30px;
-  max-width: 80px;
+  max-width: 230px;
 }
 
 .site-promo__slider-button {

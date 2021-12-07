@@ -32,8 +32,7 @@ feedbackLink.addEventListener("click", function (evt) {
   }
 });
 
-feedbackClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
+feedbackClose.addEventListener("click", function () {
   feedbackPopup.classList.remove("feedback--show");
   feedbackPopup.classList.remove("feedback--error");
 });
@@ -54,7 +53,6 @@ feedbackForm.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (feedbackPopup.classList.contains("feedback--show")) {
-      evt.preventDefault();
       feedbackPopup.classList.remove("feedback--show");
       feedbackPopup.classList.remove("feedback--error");
     }
@@ -68,15 +66,13 @@ mapLink.addEventListener("click", function (evt) {
   mapPopup.classList.add("map--show");
 });
 
-mapClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
+mapClose.addEventListener("click", function () {
   mapPopup.classList.remove("map--show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (mapPopup.classList.contains("map--show")) {
-      evt.preventDefault();
       mapPopup.classList.remove("map--show");
     }
   }

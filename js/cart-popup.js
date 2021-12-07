@@ -20,15 +20,13 @@ for (let buttonFavorites of buttonsFavorites) {
   });
 }
 
-cartPopupClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
+cartPopupClose.addEventListener("click", function () {
   cartPopup.classList.remove("cart-popup--show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (cartPopup.classList.contains("cart-popup--show")) {
-      evt.preventDefault();
       cartPopup.classList.remove("cart-popup--show");
     }
   }
